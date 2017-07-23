@@ -49,7 +49,7 @@ WORKDIR /
 RUN mkdir /bazel && \
     cd /bazel && \
     curl -fSsL -O https://github.com/bazelbuild/bazel/releases/download/$BAZEL_VERSION/bazel-$BAZEL_VERSION-installer-linux-x86_64.sh && \
-    curl -fSsL -o /bazel/LICENSE.txt https://raw.githubusercontent.com/bazelbuild/bazel/master/LICENSE.txt && \
+    # curl -fSsL -o /bazel/LICENSE.txt https://raw.githubusercontent.com/bazelbuild/bazel/master/LICENSE.txt && \
     chmod +x bazel-*.sh && \
     ./bazel-$BAZEL_VERSION-installer-linux-x86_64.sh && \
     cd / && \
@@ -88,9 +88,9 @@ RUN cd /syntaxnet-api/tensorflow-models/syntaxnet \
 
 RUN mkdir /syntaxnet-api/tensorflow-models/syntaxnet/universal_models \
     && cd /syntaxnet-api/tensorflow-models/syntaxnet/universal_models \
-	&& for LANG in Ancient_Greek-PROIEL Basque Bulgarian Chinese Croatian Czech Danish Dutch English Estonian Finnish French Galician \
-		German Greek Hebrew Hindi Hungarian Indonesian Italian Latin-PROIEL Norwegian Persian Polish Portuguese Slovenian Spanish Swedish; \
-		do wget http://download.tensorflow.org/models/parsey_universal/${LANG}.zip; unzip ${LANG}.zip; rm ${LANG}.zip; done
+    && wget http://download.tensorflow.org/models/parsey_universal/Portuguese.zip \
+    && unzip Portuguese.zip \
+    && rm Portuguese.zip
 
 RUN apt-get update && apt-get -y install python3-pip
 

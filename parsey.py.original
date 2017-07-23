@@ -15,7 +15,33 @@ from subprocess import Popen, PIPE
 from threading import Semaphore
 
 _universal_languages = {
+    'grc': 'Ancient_Greek-PROIEL',
+    'eu': 'Basque',
+    'bg': 'Bulgarian',
+    'zh': 'Chinese',
+    'hr': 'Croatian',
+    'cs': 'Czech',
+    'da': 'Danish',
+    'nl': 'Dutch',
+    'en': 'English',
+    'et': 'Estonian',
+    'fi': 'Finnish',
+    'fr': 'French',
+    'gl': 'Galician',
+    'de': 'German',
+    'el': 'Greek',
+    'he': 'Hebrew',
+    'hi': 'Hindi',
+    'hu': 'Hungarian',
+    'id': 'Indonesian',
+    'it': 'Italian',
+    'la': 'Latin-PROIEL',
+    'no': 'Norwegian',
+    'pl': 'Polish',
     'pt': 'Portuguese',
+    'sl': 'Slovenian',
+    'es': 'Spanish',
+    'sv': 'Swedish'
 }
 
 
