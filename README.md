@@ -1,40 +1,14 @@
-Dockerized SyntaxNet API
-========================
+Dockerized SyntaxNet API for Portuguese
+=======================================
 
-A small HTTP API for SyntaxNet under Apache 2 Licence.
-Based on version available at [http://syntaxnet.askplatyp.us](http://syntaxnet.askplatyp.us).
+__NOTE__: this is a fork from [https://github.com/danielperezr88/syntaxnet-api](https://github.com/danielperezr88/syntaxnet-api) which I changed to work for Portuguese only, it saves much memory, since it loads only the Portuguese model.
 
-Currently only provides a way to call Parsey trained with universal dependencies.
+Install
 
-The API documentation is availlable as a Swagger API description via web browser access to root domain.
+    git clone https://github.com/davidsbatista/syntaxnet-api
+    cd syntaxnet-api
+    docker build . -t syntaxnet-api
+    
+Run a docker Container with the built image
 
-Are available languages with the following Universal Dependencies training sets:
-
-* grc: Ancient_Greek-PROIEL
-* eu: Basque
-* bg: Bulgarian
-* zh: Chinese
-* hr: Croatian
-* cs: Czech
-* da: Danish
-* nl: Dutch
-* en: English
-* et: Estonian
-* fi: Finnish
-* fr: French
-* gl: Galician
-* de: German
-* el: Greek
-* he: Hebrew
-* hi: Hindi
-* hu: Hungarian
-* id: Indonesian
-* it: Italian
-* la: Latin-PROIEL
-* no: Norwegian
-* pl: Polish
-* pt: Portuguese
-* sl: Slovenian
-* es: Spanish
-* sv: Swedish
-
+    docker run -p 7000:7000 IMAGE_ID
