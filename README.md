@@ -12,3 +12,5 @@ Install
 Run a docker Container with the built image
 
     docker run -p 7000:7000 IMAGE_ID
+
+Blog post explaining what I did: http://www.davidsbatista.net/blog/2017/07/22/SyntaxNet-API-Portuguese/
