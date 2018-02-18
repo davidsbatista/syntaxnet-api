@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu:17.10
 
 MAINTAINER danielperezr88 <danielperezr88@gmail.com>
 
